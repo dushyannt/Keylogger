@@ -1,63 +1,150 @@
-# System Monitoring Tool
+# Advanced System Monitoring Tool
 
-## Overview
-This project is a Python-based system monitoring tool that performs the following tasks:
-- Records keystrokes and stores them in a text file.
-- Retrieves computer information and stores it in an Excel file.
-- Captures clipboard information and stores it in a text file.
-- Retrieves Google Chrome browsing history and stores it in an Excel file.
-- Takes a screenshot of the computer screen and saves it as a PNG file.
+A comprehensive system monitoring solution that combines keylogging, system information collection, clipboard monitoring, browser history tracking, and automated reporting capabilities.
 
-## Author
-- **Dushyant Vashishtha**
+## Features
 
-## Prerequisites
-- Python 3.x
-- Required Python packages (install using `pip install -r requirements.txt`):
-  - pynput
-  - pandas
-  - Pillow
-  - pywin32
-  - requests
-  - openpyxl
+### 1. Keylogging
+- Real-time keyboard input monitoring
+- Special key detection
+- Timestamp-based logging
+- Formatted output
+
+### 2. System Information Collection
+- Hardware specifications
+- IP address
+- Processor details
+- System information
+- Host name
+- Excel format storage
+
+### 3. Clipboard Monitoring
+- Real-time clipboard content tracking
+- Timestamp-based logging
+- Formatted output
+
+### 4. Browser History Tracking
+- Chrome browser history collection
+- URL and title tracking
+- Visit timestamps
+- Excel format storage
+
+### 5. Screenshot Capability
+- Screen capture functionality
+- PNG format storage
+- Timestamp-based naming
+
+### 6. Automated Reporting
+- Email-based reporting system
+- Scheduled data transmission
+- Multiple file attachments
+- Secure SMTP connection
+
+## Technical Implementation
+
+### Core Components
+- Python-based implementation
+- Class-based architecture
+- Multi-threaded operation
+- Error handling and logging
+- Resource management
+
+### File Structure
+- `system_track.pyw` - Main program file
+- `start.vbs` - Silent launcher
+- `start.bat` - Batch launcher
+- `requirements.txt` - Dependencies
+
+### Generated Files
+- `keystrokes.txt` - Keyboard input logs
+- `error_logs.txt` - Error tracking
+- `clipboard.txt` - Clipboard content
+- `system_info.xlsx` - System information
+- `chrome_history.xlsx` - Browser history
+- `screenshot.png` - Screen captures
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
 
-2. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. Ensure Python 3.x is installed
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
-1. Ensure Google Chrome is closed before running the script.
-2. Run the script:
-   ```bash
-   python Spyware_tool.py
-   ```
-3. The script will perform the following actions:
-   - Record keystrokes (press `ESC` to stop).
-   - Save system information to `keystrokes.xlsx`.
-   - Save clipboard contents to `clipboard.txt`.
-   - Save Chrome browsing history to `search_history.xlsx`.
-   - Take a screenshot and save it as `screenshot.png`.
 
-## Output Files
-- `logs.txt`: Contains recorded keystrokes.
-- `keystrokes.xlsx`: Contains system information.
-- `clipboard.txt`: Contains clipboard contents.
-- `search_history.xlsx`: Contains Chrome browsing history.
-- `screenshot.png`: Contains the screenshot.
+### Silent Operation
+1. Double-click `start.vbs`
+- Runs program silently
+- No console window
+- Background operation
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Batch Operation
+1. Double-click `start.bat`
+- Runs program in background
+- No command prompt
+- Easy execution
 
-## Acknowledgments
-- Thanks to all contributors and supporters of this project.
+## Configuration
+
+### Email Settings
+Update the following in `system_track.pyw`:
+```python
+self.sender_email = "your_email@example.com"
+self.sender_password = "your_password"
+self.receiver_email = "receiver@example.com"
+```
+
+### Monitoring Interval
+Adjust the monitoring interval in `system_track.pyw`:
+```python
+time.sleep(3600)  # Default: 1 hour
+```
+
+## Technical Details
+
+### Dependencies
+- pynput
+- pandas
+- pillow
+- win32clipboard
+- sqlite3
+- smtplib
+
+### Error Handling
+- Comprehensive error logging
+- Automatic error recovery
+- Detailed error messages
+- Separate error log file
+
+### Security Features
+- Secure email transmission
+- File cleanup after sending
+- Error logging
+- Resource management
+
+## Development
+
+### Code Structure
+- Object-oriented design
+- Modular implementation
+- Clean code practices
+- Comprehensive documentation
+
+### Best Practices
+- Error handling
+- Resource management
+- Code organization
+- Documentation
+
+## Notes
+- Program runs silently in background
+- Automatic file cleanup after email sending
+- Configurable monitoring intervals
+- Secure data transmission
+
+## Disclaimer
+This tool is for educational purposes only. Always ensure proper authorization before monitoring any system.
 
 # Spyware
 
